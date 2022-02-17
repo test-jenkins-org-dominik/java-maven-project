@@ -4,7 +4,7 @@ pipeline {
         stage ('Maven Install') {
             agent { label 'u20-mvn-jdk8' }
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true install' 
+                sh 'mvn clean install' 
             }
         }
     }
